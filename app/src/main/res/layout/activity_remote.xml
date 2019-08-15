@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RemoteActivity">
+
+    <ImageButton
+        android:id="@+id/desktopButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchLayout"
+        android:src="@drawable/ic_desktop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/touchpadButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchLayout"
+        android:src="@drawable/ic_touchpad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desktopButton"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/keyboardButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchLayout"
+        android:src="@drawable/ic_keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/touchpadButton"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/imageTransferButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchLayout"
+        android:src="@drawable/ic_image_transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/keyboardButton"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/functionalKeysButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="onSwitchLayout"
+        android:src="@drawable/ic_functional_keys"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTransferButton"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/exitButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:onClick="onExitButton"
+        android:src="@drawable/ic_exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ViewFlipper
+        android:id="@+id/mainRemoteLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/exitButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/keyboardLayout"
+            layout="@layout/sample_keyboard_view" />
+
+        <include
+            android:id="@+id/touchpadLayout"
+            layout="@layout/sample_touchpad_view" />
+
+        <include
+            android:id="@+id/desktopLayout"
+            layout="@layout/sample_desktop_view" />
+
+        <include
+            android:id="@+id/imageTransferLayout"
+            layout="@layout/sample_image_transfer" />
+
+        <include
+            android:id="@+id/imageTransferLayout"
+            layout="@layout/sample_functional_keys" />
+
+    </ViewFlipper>
+
+</android.support.constraint.ConstraintLayout>

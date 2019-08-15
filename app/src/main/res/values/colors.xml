@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="defaultButtonColor">#33FFFFFF</color>
+    <color name="pressedButtonColor">#55FFFFFF</color>
+    <color name="touchpadColor">#33FFFFFF</color>
+    <color name="pressedTouchpadButtonColor">#55FFFFFF</color>
+    <color name="keyColor">#33FFFFFF</color>
+    <color name="pressedKeyColor">#55FFFFFF</color>
+    <color name="progressBarColor">#A300FF00</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

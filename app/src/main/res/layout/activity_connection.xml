@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConnectionActivity">
+
+    <LinearLayout
+        android:id="@+id/ipLayout"
+        android:layout_width="419dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ipLabel"
+            android:layout_width="46dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:text="@string/ip_label"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/ipValue"
+            style="@style/InputTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="localhost"
+            android:ems="10"
+            android:inputType="text"
+            android:nextFocusForward="@null"
+            android:text="@string/ip_value"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="419dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipLayout">
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="24dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="@string/password_label"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/passwordValue"
+            style="@style/InputTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="localhost"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/password_value"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="135dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onConnectButton"
+        android:text="@string/button_connect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <RadioGroup
+        android:id="@+id/switchProtocol"
+        android:layout_width="134dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="40dp"
+        android:checkedButton="@+id/protocolTcp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/protocolTcp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/switch_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/tcp_value" />
+
+        <RadioButton
+            android:id="@+id/protocolUdp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/switch_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/udp_value" />
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
